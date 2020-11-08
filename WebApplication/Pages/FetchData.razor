@@ -1,0 +1,85 @@
+﻿@page "/adult"
+@using WebApplication.Data
+@using WebApplication.Data.Model
+
+<h1>Searching for adults</h1>
+
+<p>
+    Filter by User Id: <input type="number" @oninput="@((arg) => FilterById(arg))" style="width:100px"/>
+</p>
+
+@if (_allAdults == null)
+{
+    <p>
+        <em>Loading...</em>
+    </p>
+} else if (!_filteredAdults.Any())
+{
+    <p>
+        <em>There is no adult to show.</em>
+    </p>
+}
+else
+{
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Job title</th>
+            <th>ID</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Hair color</th>
+            <th>Eye color</th>
+            <th>Age</th>
+            <th>Weight</th>
+            <th>Height</th>
+            <th>Sex</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var adult in _filteredAdults)
+        {
+            <tr>
+                <td>@adult.JobTitle</td>
+                <td>@adult.Id</td>
+                <td>@adult.FirstName</td>
+                <td>@adult.LastName</td>
+                <td>@adult.HairColor</td>
+                <td>@adult.EyeColor</td>
+                <td>@adult.Age</td>
+                <td>@adult.Weight</td>
+                <td>@adult.Height</td>
+                <td>@adult.Sex</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+@code {
+    private IList<Adult> _allAdults;
+    private IList<Adult> _filteredAdults;
+    private IService Service = new CloudService();
+    
+    private int? filterById;
+
+    private void FilterById(ChangeEventArgs changeEventArgs) {
+        filterById = null;
+        try {
+            filterById = int.Parse(changeEventArgs.Value.ToString());
+        } catch (Exception e) { }
+        ExecuteFilter();
+    }
+    
+    private void ExecuteFilter() {
+        _filteredAdults = _allAdults.Where(t => 
+            (filterById != null && t.Id == filterById || filterById == null)
+            ).ToList();
+    }
+    
+    protected override async Task OnInitializedAsync()
+    {
+        _filteredAdults = await Service.GetAsync();
+        _allAdults = _filteredAdults;
+    }
+}

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics.CodeAnalysis;
@@ -54,6 +55,11 @@ namespace WebApplication.Data.Model
 
                 return new ValidationResult("Valid hair colors are: Brown, Grey, Green, Blue, Amber, Hazel");
             }
+        }
+
+        public override string ToString()
+        {
+            return base.ToString();
         }
     }
 }

@@ -21,41 +21,23 @@ namespace WebApplication.Data
         public CloudService() 
         {
             client = new HttpClient();
-            uri = "http://dnp.metamate.me/Adults";
+            uri = "http://localhost:5000";
         }
 
         public async Task<IList<Adult>> GetAsync() {
-            /*Task<string> stringAsync = client.GetStringAsync(uri);
-            string message = await stringAsync;*/
-            Adult adult = new Adult();
-            string message = await client.GetStringAsync(uri);
-            System.Diagnostics.Debug.WriteLine(message);
-            IList<Adult> list = JsonConvert.DeserializeObject <List<Adult>>(message);
-            foreach (Adult item in list)
+            System.Diagnostics.Debug.WriteLine("asdfgh");
+            Task<string> task = client.GetStringAsync(uri + "/adults");
+            string message = await task;
+            try
             {
-                System.Diagnostics.Debug.WriteLine(item);
+                IList<Adult> list = JsonConvert.DeserializeObject<List<Adult>>(message);
+                return list;
             }
-            return list;
-        }
-        
-        public async Task AddAsync(Adult adult) {
-            string AsJson = System.Text.Json.JsonSerializer.Serialize(adult);
-            HttpContent content = new StringContent(AsJson,
-                Encoding.UTF8,
-                "application/json");
-            await client.PostAsync(uri+"/Adults", content);
-        }
-
-        public async Task RemoveAsync(int Id) {
-            await client.DeleteAsync($"{uri}/Adults/{Id}");
-        }
-
-        public async Task UpdateAsync(Adult adult) {
-            string AsJson = System.Text.Json.JsonSerializer.Serialize(adult);
-            HttpContent content = new StringContent(AsJson,
-                Encoding.UTF8,
-                "application/json");
-            await client.PatchAsync($"{uri}/Adults/{adult.Id}", content);
+            catch (Exception e)
+            {
+                System.Diagnostics.Debug.WriteLine(e.StackTrace);
+                return new List<Adult>();
+            }
         }
     }
 }

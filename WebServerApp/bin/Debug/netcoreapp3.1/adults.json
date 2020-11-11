@@ -1,0 +1,38 @@
+[
+  {
+    "JobTitle": null,
+    "Id": 0,
+    "FirstName": "Blabla",
+    "LastName": "BlaBla",
+    "HairColor": null,
+    "EyeColor": null,
+    "Age": 0,
+    "Weight": 0,
+    "Height": 0,
+    "Sex": null
+  },
+  {
+    "JobTitle": null,
+    "Id": 2,
+    "FirstName": "Matej",
+    "LastName": "Hackl",
+    "HairColor": null,
+    "EyeColor": null,
+    "Age": 0,
+    "Weight": 0,
+    "Height": 0,
+    "Sex": null
+  },
+  {
+    "JobTitle": null,
+    "Id": 3,
+    "FirstName": "Bob",
+    "LastName": "Builder",
+    "HairColor": null,
+    "EyeColor": null,
+    "Age": 0,
+    "Weight": 0,
+    "Height": 0,
+    "Sex": null
+  }
+]

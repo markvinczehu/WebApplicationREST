@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "YMafrK17kvW9pWK2j0HFLG35IUJ5ijOrcPYmQcMYCX3NdzsoYgL1KuEZ+Pb7zDwlDwy3/4iXYam8paDh4vVbZA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Felhasználó\\source\\repos\\WebApplicationREST_DNP1_assignment2-3\\WebServerApp\\WebServerApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Felhasználó\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "C:\\Users\\Mark\\RiderProjects\\WebApplication\\WebApplication\\WebApplication.csproj",
+    "projectUniqueName": "C:\\Users\\Mark\\RiderProjects\\WebApplicationREST\\WebApplication\\WebApplication.csproj",
     "projectName": "WebApplication",
-    "projectPath": "C:\\Users\\Mark\\RiderProjects\\WebApplication\\WebApplication\\WebApplication.csproj",
-    "outputPath": "C:\\Users\\Mark\\RiderProjects\\WebApplication\\WebApplication\\obj\\",
+    "projectPath": "C:\\Users\\Mark\\RiderProjects\\WebApplicationREST\\WebApplication\\WebApplication.csproj",
+    "outputPath": "C:\\Users\\Mark\\RiderProjects\\WebApplicationREST\\WebApplication\\obj\\",
     "projectStyle": "PackageReference",
     "originalTargetFrameworks": [
       "netcoreapp3.1"
@@ -46,6 +46,10 @@
         "Microsoft.EntityFrameworkCore.Tools": {
           "target": "Package",
           "version": "[3.1.9, )"
+        },
+        "Newtonsoft.Json": {
+          "target": "Package",
+          "version": "[12.0.3, )"
         }
       },
       "imports": [

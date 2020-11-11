@@ -1,16 +1,66 @@
 ﻿@inherits LayoutComponentBase
+@using WebApplication.Authorisation
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject NavigationManager NavigationManager
 
 <div class="sidebar">
     <NavMenu/>
 </div>
 
 <div class="main">
-    <div class="top-row px-4 auth">
-        <LoginDisplay/>
+    <div class="top-row px-8 auth">
+        <AuthorizeView>
+        <NotAuthorized>
+            <div>
+                <label>Username:</label><input type="text" @bind-value="username"><label>Password:</label><input type="password" @bind-value="password"><a href="" @onclick="PerformLogin"> Login </a>
+            </div>
+            <div style="color:red">@errorMessage</div>
+        </NotAuthorized>
+        <Authorized>
+        <a href="" @onclick="PerformLogout"> Logout </a>
+        </Authorized>
+        </AuthorizeView>
         <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
     </div>
-
     <div class="content px-4">
         @Body
     </div>
 </div>
+
+@code
+{
+    private string username;
+    private string password;
+    private string errorMessage;
+
+    public async Task PerformLogin()
+    {
+        errorMessage = "";
+        try
+        {
+            await ((CustomAuthenticationStateProvider) AuthenticationStateProvider).ValidateLogin(username, password);
+            username = "";
+            password = "";
+            NavigationManager.NavigateTo("/adult");
+        }
+        catch (Exception e)
+        {
+            errorMessage = e.Message;
+        }
+    }
+
+    public async Task PerformLogout()
+    {
+        errorMessage = "";
+        username = "";
+        password = "";
+        try
+        {
+            await ((CustomAuthenticationStateProvider) AuthenticationStateProvider).Logout();
+            NavigationManager.NavigateTo("/");
+        }
+        catch (Exception e)
+        {
+        }
+    }
+}

@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mark\\RiderProjects\\WebApplicationREST\\WebApplication\\WebApplication.csproj": {}
+    "C:\\Users\\Felhasználó\\source\\repos\\DNP1_assign2-3\\WebApplication\\WebApplication.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mark\\RiderProjects\\WebApplicationREST\\WebApplication\\WebApplication.csproj": {
+    "C:\\Users\\Felhasználó\\source\\repos\\DNP1_assign2-3\\WebApplication\\WebApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mark\\RiderProjects\\WebApplicationREST\\WebApplication\\WebApplication.csproj",
+        "projectUniqueName": "C:\\Users\\Felhasználó\\source\\repos\\DNP1_assign2-3\\WebApplication\\WebApplication.csproj",
         "projectName": "WebApplication",
-        "projectPath": "C:\\Users\\Mark\\RiderProjects\\WebApplicationREST\\WebApplication\\WebApplication.csproj",
-        "packagesPath": "C:\\Users\\Mark\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mark\\RiderProjects\\WebApplicationREST\\WebApplication\\obj\\",
+        "projectPath": "C:\\Users\\Felhasználó\\source\\repos\\DNP1_assign2-3\\WebApplication\\WebApplication.csproj",
+        "packagesPath": "C:\\Users\\Felhasználó\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Felhasználó\\source\\repos\\DNP1_assign2-3\\WebApplication\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Mark\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Felhasználó\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -81,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

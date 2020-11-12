@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components.Authorization;
+using Microsoft.AspNetCore.Components.Server;
 using Microsoft.JSInterop;
 using Newtonsoft.Json;
 using WebApplication.Data;
@@ -10,7 +11,7 @@ using WebApplication.Data.Model;
 
 namespace WebApplication.Authorisation
 {
-    public class CustomAuthenticationStateProvider : AuthenticationStateProvider
+    public class CustomAuthenticationStateProvider : ServerAuthenticationStateProvider
     {
         private readonly IUserService _service;
         private readonly IJSRuntime _jsRuntime;

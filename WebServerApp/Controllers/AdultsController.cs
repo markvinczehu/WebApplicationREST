@@ -9,8 +9,9 @@ using WebServerApp.Services;
 
 namespace WebServerApp
 {
-    [Route("[controller]")]
     [ApiController]
+    [Route("[controller]")]
+    
     public class AdultsController : ControllerBase
     {
         IAdultService adultService;

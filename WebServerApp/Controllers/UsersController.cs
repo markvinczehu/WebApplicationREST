@@ -9,10 +9,11 @@ using WebServerApp.Services;
 
 namespace WebServerApp.Controllers
 {
-    [Route("api/users")]
+    [Route("[controller]")]
     [ApiController]
     public class UsersController : ControllerBase
     {
+
         IUserService userService;
 
         public UsersController()
@@ -21,17 +22,22 @@ namespace WebServerApp.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<bool>> ValidateUser(User user)
+        public async Task<ActionResult<User>> ValidateUser([FromQuery] string username, [FromQuery] string password)
         {
+            User user = new User();
+            user.Username = username;
+            user.Password = password;
+
             try
             {
-                if (userService.validateUser(user)) return true;
-                else return false;
+                if (userService.validateUser(user)) return user;
+                else return null;
             }
+
             catch (Exception e)
             {
                 System.Diagnostics.Debug.WriteLine(e.StackTrace);
-                return false;
+                return null;
             }
         }
     }

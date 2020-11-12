@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Felhasználó\\source\\repos\\WebApplicationREST_DNP1_assignment2-3\\WebApplication\\WebApplication.csproj": {}
+    "C:\\Users\\Felhasználó\\source\\repos\\DNP1_assign2-3\\WebApplication\\WebApplication.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Felhasználó\\source\\repos\\WebApplicationREST_DNP1_assignment2-3\\WebApplication\\WebApplication.csproj": {
+    "C:\\Users\\Felhasználó\\source\\repos\\DNP1_assign2-3\\WebApplication\\WebApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Felhasználó\\source\\repos\\WebApplicationREST_DNP1_assignment2-3\\WebApplication\\WebApplication.csproj",
+        "projectUniqueName": "C:\\Users\\Felhasználó\\source\\repos\\DNP1_assign2-3\\WebApplication\\WebApplication.csproj",
         "projectName": "WebApplication",
-        "projectPath": "C:\\Users\\Felhasználó\\source\\repos\\WebApplicationREST_DNP1_assignment2-3\\WebApplication\\WebApplication.csproj",
+        "projectPath": "C:\\Users\\Felhasználó\\source\\repos\\DNP1_assign2-3\\WebApplication\\WebApplication.csproj",
         "packagesPath": "C:\\Users\\Felhasználó\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Felhasználó\\source\\repos\\WebApplicationREST_DNP1_assignment2-3\\WebApplication\\obj\\",
+        "outputPath": "C:\\Users\\Felhasználó\\source\\repos\\DNP1_assign2-3\\WebApplication\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

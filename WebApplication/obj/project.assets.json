@@ -1601,11 +1601,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Felhasználó\\Source\\Repos\\WebApplicationREST_DNP1_assignment2-3\\WebApplication\\WebApplication.csproj",
+      "projectUniqueName": "C:\\Users\\Felhasználó\\Source\\Repos\\DNP1_assign2-3\\WebApplication\\WebApplication.csproj",
       "projectName": "WebApplication",
-      "projectPath": "C:\\Users\\Felhasználó\\Source\\Repos\\WebApplicationREST_DNP1_assignment2-3\\WebApplication\\WebApplication.csproj",
+      "projectPath": "C:\\Users\\Felhasználó\\Source\\Repos\\DNP1_assign2-3\\WebApplication\\WebApplication.csproj",
       "packagesPath": "C:\\Users\\Felhasználó\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Felhasználó\\Source\\Repos\\WebApplicationREST_DNP1_assignment2-3\\WebApplication\\obj\\",
+      "outputPath": "C:\\Users\\Felhasználó\\Source\\Repos\\DNP1_assign2-3\\WebApplication\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

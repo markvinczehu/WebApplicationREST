@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using WebApplication.Data.Model;
+using WebServerApp.Data.Model;
 using WebServerApp.Services;
 
 namespace WebServerApp
@@ -21,6 +21,12 @@ namespace WebServerApp
             adultService = new AdultService();
         }
 
+        /// <summary>
+        /// Returns a list of all adults.
+        /// </summary>
+        /// <returns>An IList of Adults, embedded within a Task, with ActionResult subtype</returns>
+        /// <response code="200">Returns the item with an OK HTTP response code.</response>
+        /// <response code="500">Returns a status code 500, Internal Server Error.</response>
         [HttpGet]
         public async Task<ActionResult<IList<Adult>>> GetAdultsAsync()
         {

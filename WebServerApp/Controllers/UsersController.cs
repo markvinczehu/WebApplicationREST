@@ -21,6 +21,12 @@ namespace WebServerApp.Controllers
             userService = new UserService();
         }
 
+        /// <summary>
+        /// This method validates users from the server, enabling more actions.
+        /// </summary>
+        /// <param name="username">The username of the user, sent in the query.</param>
+        /// <param name="password">The password of the user, sent in the query.</param>
+        /// <returns>An User, embedded in a Task, with the subtype ActionResult.</returns>
         [HttpGet]
         public async Task<ActionResult<User>> ValidateUser([FromQuery] string username, [FromQuery] string password)
         {

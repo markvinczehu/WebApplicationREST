@@ -3,7 +3,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Text.Json;
 using Microsoft.AspNetCore.Components;
 
-namespace WebApplication.Data.Model
+namespace WebServerApp.Data.Model
 {
     public class Adult : Person
     {

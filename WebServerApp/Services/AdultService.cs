@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using WebServerApp.Data.Model;
+using WebServerApp.Database;
 
 namespace WebServerApp.Services
 {
@@ -12,19 +13,12 @@ namespace WebServerApp.Services
     {
         public IList<Adult> GetAllAdults()
         {
-            System.Diagnostics.Debug.WriteLine("Service");
-            IList<Adult> adults = new List<Adult>();
-            string json = ReadData("adults.json");
-            adults = JsonConvert.DeserializeObject<List<Adult>>(json);
-            return adults;
-        }
-        private string ReadData(string s)
-        {
-            using (StreamReader jsonReader = File.OpenText(s))
+            List<Adult> adult;
+            using (var context = new UserDbContext())
             {
-                string json = jsonReader.ReadToEnd();
-                return json;
+                adult = context.Adults.ToList();
             }
+            return adult;
         }
     }
 }

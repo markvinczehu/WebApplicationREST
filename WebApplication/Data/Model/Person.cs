@@ -10,9 +10,9 @@ namespace WebApplication.Data.Model
     public class Person
     {
         [Required]
-        public int Id { get; set; }
-        [NotNull] public string FirstName { get; set; }
-        [NotNull] public string LastName { get; set; }
+       [Key] public int Id { get; set; }
+        [NotNull, MaxLength (256)] public string FirstName { get; set; }
+        [NotNull, MaxLength (256)] public string LastName { get; set; }
         [ValidHairColor] public string HairColor { get; set; }
         [NotNull] [ValidEyeColor] public string EyeColor { get; set; }
         [NotNull, Range(0, 125)] public int Age { get; set; }

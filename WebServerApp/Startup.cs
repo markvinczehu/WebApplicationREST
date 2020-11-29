@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Reflection;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components.Authorization;
@@ -12,14 +10,13 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.JSInterop;
 using WebApplication.Authorisation;
+using WebServerApp.Database;
 using WebServerApp.Services;
 
 namespace WebServerApp
 {
     public class Startup
     {
-        private object c;
-
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
@@ -28,19 +25,7 @@ namespace WebServerApp
             services.AddControllers();
             services.AddScoped<IAdultService, AdultService>();
             services.AddScoped<IUserService, UserService>();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
-                {
-                    Version = "v1",
-                    Title = "DNP assignment 3 docs"
-                });
-                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-                c.IncludeXmlComments(xmlPath);
-            });
-
-
+            services.AddEntityFrameworkSqlite().AddDbContext<UserDbContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,12 +35,6 @@ namespace WebServerApp
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("swagger/v1/swagger.json", "API Documentation v1");
-                c.RoutePrefix = string.Empty;
-            });
 
             app.UseRouting();
 

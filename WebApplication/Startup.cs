@@ -10,6 +10,7 @@ using WebApplication.Data;
 using Microsoft.JSInterop;
 using Microsoft.AspNetCore.Components.Authorization;
 using WebApplication.Authorisation;
+using IHostingEnvironment = Microsoft.AspNetCore.Hosting.IHostingEnvironment;
 
 namespace WebApplication
 {
@@ -17,6 +18,7 @@ namespace WebApplication
     {
         public Startup(IConfiguration configuration)
         {
+            
             Configuration = configuration;
         }
 

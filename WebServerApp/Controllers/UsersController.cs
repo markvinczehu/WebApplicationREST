@@ -36,7 +36,7 @@ namespace WebServerApp.Controllers
 
             try
             {
-                if (userService.validateUser(user)) return user;
+                if (userService.ValidateUser(username, password)) return user;
                 else return null;
             }
 

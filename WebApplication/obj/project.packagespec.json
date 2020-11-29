@@ -1,16 +1,15 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "C:\\Users\\Mark\\RiderProjects\\WebApplicationREST\\WebApplication\\WebApplication.csproj",
+    "projectUniqueName": "C:\\Users\\matej\\RiderProjects\\WebApplicationREST\\WebApplication\\WebApplication.csproj",
     "projectName": "WebApplication",
-    "projectPath": "C:\\Users\\Mark\\RiderProjects\\WebApplicationREST\\WebApplication\\WebApplication.csproj",
-    "outputPath": "C:\\Users\\Mark\\RiderProjects\\WebApplicationREST\\WebApplication\\obj\\",
+    "projectPath": "C:\\Users\\matej\\RiderProjects\\WebApplicationREST\\WebApplication\\WebApplication.csproj",
+    "outputPath": "C:\\Users\\matej\\RiderProjects\\WebApplicationREST\\WebApplication\\obj\\",
     "projectStyle": "PackageReference",
     "originalTargetFrameworks": [
       "netcoreapp3.1"
     ],
     "sources": {
-      "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
       "https://api.nuget.org/v3/index.json": {}
     },
     "frameworks": {
@@ -70,7 +69,7 @@
           "privateAssets": "all"
         }
       },
-      "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+      "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
     }
   }
 }

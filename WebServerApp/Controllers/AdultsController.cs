@@ -35,6 +35,7 @@ namespace WebServerApp
                 System.Diagnostics.Debug.WriteLine("Controller");
                 IList<Adult> list = new List<Adult>();
                 list = adultService.GetAllAdults();
+                Console.WriteLine(list);
                 return Ok(list);
             }
             catch (Exception e)

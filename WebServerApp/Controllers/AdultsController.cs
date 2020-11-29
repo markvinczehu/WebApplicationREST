@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using WebApplication.Data.Model;
+using WebServerApp.Data.Model;
 using WebServerApp.Services;
 
 namespace WebServerApp
@@ -29,6 +29,7 @@ namespace WebServerApp
                 System.Diagnostics.Debug.WriteLine("Controller");
                 IList<Adult> list = new List<Adult>();
                 list = adultService.GetAllAdults();
+                Console.WriteLine(list);
                 return Ok(list);
             }
             catch (Exception e)

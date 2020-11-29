@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 
-namespace WebApplication.Data.Model
+namespace WebServerApp.Data.Model
 {
     public class Person
     {

@@ -9,7 +9,7 @@ namespace WebServerApp.Services
         public bool ValidateUser(string username, string password)
         {
             User user;
-            using (var context = new UserDBContext())
+            using (var context = new UserDbContext())
             {
                 user = context.Users.SingleOrDefault(a => a.Username == username);
             }

@@ -25,7 +25,7 @@ namespace WebServerApp
             services.AddControllers();
             services.AddScoped<IAdultService, AdultService>();
             services.AddScoped<IUserService, UserService>();
-            services.AddEntityFrameworkSqlite().AddDbContext<UserDBContext>();
+            services.AddEntityFrameworkSqlite().AddDbContext<UserDbContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

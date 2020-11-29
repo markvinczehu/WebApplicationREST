@@ -1,13 +1,19 @@
-﻿using WebServerApp.Data.AuthData;
+﻿using System.Linq;
+using WebServerApp.Data.AuthData;
+using WebServerApp.Database;
 
 namespace WebServerApp.Services
 {
     public class UserService : IUserService
     {
-        public bool validateUser(User user)
+        public bool ValidateUser(string username, string password)
         {
-            if (user.Username == "asdfgh" && user.Password == "qwertz") return true;
-            else return false;
+            User user;
+            using (var context = new UserDBContext())
+            {
+                user = context.Users.SingleOrDefault(a => a.Username == username);
+            }
+            return user != null && user.Password.Equals(password);
         }
     }
 }

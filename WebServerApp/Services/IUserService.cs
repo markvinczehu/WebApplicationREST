@@ -8,6 +8,6 @@ namespace WebServerApp.Services
 {
     interface IUserService
     {
-        public bool validateUser(User user);
+        public bool ValidateUser(string username, string password);
     }
 }
